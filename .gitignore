@@ -4,6 +4,3 @@ __pycache__/
 *.m~
 *.asv
 *.egg-info
-
-*refined.mat
-big_train.mat
