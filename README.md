@@ -1,4 +1,4 @@
-## QRnet
+# QRnet
 
 This software repository is a proof of concept implementation of neural network (NN) optimal feedback controllers with added local stability guarantees. See the associated papers for details:
 
@@ -8,7 +8,7 @@ This software repository is a proof of concept implementation of neural network 
 
 If you use this software, please cite one or more of the above works. Please reach out with any questions, or if you encounter bugs or other problems.
 
-### Installation
+## Installation
 
 To install the `qrnet` package (in developer mode) run `pip install -e .` from the command line. This package has been developed and tested with the following software dependencies:
 
@@ -21,11 +21,11 @@ To install the `qrnet` package (in developer mode) run `pip install -e .` from t
     dill=0.3.2
     pylgr
 
-The pylgr package can be downloaded at [https://github.com/Tenavi/PyLGR](https://github.com/Tenavi/PyLGR). `MATLAB` code has been tested in `R2022a`.
+The `pylgr` package can be downloaded at [https://github.com/Tenavi/PyLGR](https://github.com/Tenavi/PyLGR). The examples included in this repo make use of some MATLAB code, which has been tested in version R2022a.
 
 `qrnet` may work with other versions of the packages listed above, but this is not guaranteed. In the future we plan to update `qrnet` to use `Tensorflow 2`.
 
-### The `qrnet` package
+## The `qrnet` package
 
 This is the main installable package which contains the working components for data generation, NN design, training, validation, and closed loop simulation.
 
@@ -53,13 +53,13 @@ This is the main installable package which contains the working components for d
 
     * `monte_carlo` is a wrapper function of `sim_to_converge` which conducts a set of closed loop simulations and optionally compares the results to open loop optimal solutions.
 
-### Running example scripts
+## Running example scripts
 
 #### `problem.py`
 
 This script is used by scripts in the `run` folder. It imports `config` and `OCP` instances from `examples` depending on which example OCP is selected (not commented out). It also defines and creates some needed directories for saving data, models, and simulation results.
 
-#### The `run` folder
+### The `run` folder
 
 These are standalone scripts which exemplify different functionalities of the `qrnet` package. The scripts in this folder make use of `problem.py` in the root directory, described above. They are meant to be run from the root directory and accept command line arguments. Common command line arguments are:
 
@@ -75,7 +75,7 @@ These are standalone scripts which exemplify different functionalities of the `q
 
 * `-v` (`int`, default=`0`): Level of verbosity used for some scripts. See each script for options.
 
-###### The `run` folder is organized as follows:
+##### The `run` folder is organized as follows:
 
 * `run.data` shows how to use `qrnet.generate` to generate open loop optimal control data. Data sets are saved as `.mat` files which can be accessed in MATLAB and python with the `scipy.io` module.
 
@@ -99,7 +99,7 @@ These are standalone scripts which exemplify different functionalities of the `q
 
 * `run.clean` is a script which deletes saved NNs and Monte Carlo results for models which have been deleted from `model_info.csv`.
 
-#### The `examples` folder
+### The `examples` folder
 
 This folder contains the example OCPs presented in the referenced papers, and some additional unpublished examples. Critically, each control problem is itself treated as a module which defines `config`, an instance of `qrnet.problem_template.MakeConfig`, and `MakeOCP`, a subclass of `qrnet.problem_template.TemplateOCP` which is later instantiated in `problem.py`. These can be found and adjusted in `examples.<example>.problem_def.py`. Each example has several MATLAB scripts which can be used to plot simulation results. The example problems are
 
