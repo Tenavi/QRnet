@@ -1,8 +1,8 @@
 # QRnet
 
-This software repository is a proof of concept implementation of neural network (NN) optimal feedback controllers with added local stability guarantees. See the associated papers for details:
+This software repository is a proof of concept implementation of neural network (NN) optimal feedback controllers with local stability guarantees. See the associated papers for details:
 
-  * [Neural Network Optimal Feedback Control with Guaranteed Local Stability](https://doi.org/10.48550/arXiv.2205.00394)
+  * [Neural Network Optimal Feedback Control with Guaranteed Local Stability](https://doi.org/10.1109/OJCSYS.2022.3205863)
   * [Neural Network Optimal Feedback Control with Enhanced Closed Loop Stability](https://doi.org/10.48550/arXiv.2109.07466)
   * [QRnet: Optimal Regulator Design With LQR-Augmented Neural Networks](https://doi.org/10.1109/LCSYS.2020.3034415)
 
@@ -109,7 +109,7 @@ This folder contains the example OCPs presented in the referenced papers, and so
 
 * `examples.burgers`: Stabilization of discretized Burgers equation with destabilizing reaction term and two distributed control inputs. The dimension of the discretization can be specified by changing `examples.burgers.problem_def.N_STATES`.
 
-* `examples.uav`: Stabilization, altitude tracking, and course tracking for a six degree of freedom fixed wing unmanned aircraft. This is a more realistic - and accordingly more challenging - example than the others.
+* `examples.uav`: Stabilization, altitude tracking, and course tracking for a six degree of freedom fixed wing unmanned aircraft. This is a more realistic - and accordingly more challenging - example than the others. Some aspects of this example problem are not fully implemented.
 
 The `examples` folder also contains `examples.plotting`, a folder of MATLAB scripts used to visualize training and Monte Carlo results. These scripts were used to generate figures in the listed references. The user will probably want to write their own plotting scripts; these are provided only for reference.
 
