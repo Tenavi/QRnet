@@ -3,7 +3,7 @@
 This software repository is a proof of concept implementation of neural network (NN) optimal feedback controllers with local stability guarantees. See the associated papers for details:
 
   * [Neural Network Optimal Feedback Control with Guaranteed Local Stability](https://doi.org/10.1109/OJCSYS.2022.3205863)
-  * [Neural Network Optimal Feedback Control with Enhanced Closed Loop Stability](https://doi.org/10.48550/arXiv.2109.07466)
+  * [Neural Network Optimal Feedback Control with Enhanced Closed Loop Stability](https://doi.org/10.23919/ACC53348.2022.9867619)
   * [QRnet: Optimal Regulator Design With LQR-Augmented Neural Networks](https://doi.org/10.1109/LCSYS.2020.3034415)
 
 If you use this software, please cite one or more of the above works. Please reach out with any questions, or if you encounter bugs or other problems.
@@ -21,9 +21,11 @@ To install the `qrnet` package (in developer mode) run `pip install -e .` from t
     dill=0.3.2
     pylgr
 
-The `pylgr` package can be downloaded at [https://github.com/Tenavi/PyLGR](https://github.com/Tenavi/PyLGR). The examples included in this repo make use of some MATLAB code, which has been tested in version R2022a.
+The `pylgr` package can be downloaded at [https://github.com/Tenavi/PyLGR](https://github.com/Tenavi/PyLGR).
 
 `qrnet` may work with other versions of the packages listed above, but this is not guaranteed. In the future we plan to update `qrnet` to use `Tensorflow 2`.
+
+The examples included in this repo make use of some MATLAB code, which has been tested in version R2022a.
 
 ## The `qrnet` package
 
