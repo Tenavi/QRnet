@@ -32,13 +32,6 @@ config = {
     'batch_size': 4096
 }
 
-alt_config = {
-    'direct_n_init_nodes': 64,
-    'direct_tol': 1e-08,
-    'ocp_solver': 'indirect'
-}
-config = {**config, **alt_config}
-
 config = MakeConfig(**config)
 
 class MakeOCP(TemplateOCP):
